@@ -1,0 +1,20 @@
+class hello{
+    public static int secondLargest(int[] arr){
+       int seclarge=Integer.MIN_VALUE;
+       int large=Integer.MIN_VALUE;
+       for(int i=0;i<arr.length;i++){
+           if(arr[i]>large){
+               seclarge=large;
+               large=arr[i];
+           }
+           else if(arr[i]>seclarge && arr[i]<large){
+               seclarge=arr[i];
+           }
+       }
+       return seclarge;
+    }
+    public static void main(String...args){
+        int[] arr={1,2,3,3,3,4,4,4,4};
+        System.out.println(secondLargest(arr));
+    }
+}
